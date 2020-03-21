@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require("../data/helpers/projectModel");
-const actionsRouter = require('../actions/actionsRouter');
+
 
 const router = express.Router();
 
@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-    res.status(200).json(req.user);
+    res.status(200).json(req.project);
 })
 
 router.post("/", validateProject, (req, res) => {
@@ -54,7 +54,7 @@ router.get("/:id/actions", (req, res) => {
         .catch(err => res.status(500).json({ message: "internal server error" }))
 })
 
-router.use('/:id/actions', actionsRouter);
+
 
 function validateProjectId(req, res, next) {
 

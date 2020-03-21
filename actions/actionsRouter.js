@@ -5,6 +5,16 @@ const router = express.Router();
 
 router.use("/:actionid", validateActionId)
 
+router.get("/", (req, res) => {
+    db.get()
+        .then(data => {
+            data ? res.status(200).json(data) : res.status(404).json({ message: "There is no data" })
+        })
+        .catch(err => {
+            res.status(500).json({ message: "internal server error" })
+        })
+});
+
 router.get("/:actionid", (req, res) => {
     res.status(200).json(req.action)
 });
