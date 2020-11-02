@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/LambdaSchool/node-api-challenge) 
+
 # Sprint Challenge: Express and Node.js - Projects & Actions
 
 ## Description
@@ -39,12 +41,15 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
+    - I learned how to create middleware with next() and understand status codes.
 
-- [ ] Describe Middleware?
+- [ ] Describe Middleware? 
+    - Middleware acts like a bridge between the the endpoint and the response
 
 - [ ] Describe a Resource?
-
+    - a  resource is data that can be sent and recienved by the client
 - [ ] What can the API return to help clients know if a request was successful?
+The server can return 2xx codes to let the client know.
 
 - [ ] How can we partition our application into sub-applications?
 
